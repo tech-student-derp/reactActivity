@@ -1,0 +1,263 @@
+@font-face {
+  font-family: "PokemonFont";
+  src: url("assets/pokemon_pixel_font_repaired.ttf") format("truetype");
+}
+
+* {
+  font-family: "PokemonFont", Arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: repeating-linear-gradient(
+        to bottom,
+        #4a7342 0px,
+        #4a7342 4px,
+        #7ba573 4px,
+        #7ba573 8px
+  );
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 1.25rem;
+  background-color: gray;
+}
+
+header > h2 {
+  font-size: 50px;
+  text-shadow: 2.25px 2.25px 0px #2187ec;
+}
+
+header > button {
+  padding-top: 12px;
+  text-shadow: 2.25px 2.25px 0px #4a94b5;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #4a94b5;    
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 10rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main > div {
+  margin-top: 1.5rem;
+  background-color: #8890c0;
+  width: 32rem;
+  height: 10rem;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+main > div > div {
+  background-color: #605068;
+  height: 95%;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > div > div > div {
+  background-color: #f8f8f8;
+  height: 95%;
+  width: 98%;
+  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+main > div > div > div > label {
+  font-size: 45px;
+}
+
+main > div > div > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+main > div > div > div > div > input {
+  height: 3rem;
+  font-size: 32px;
+}
+
+main > div > div > div > div > button {
+  font-size: 24px;
+  background-color: #a2d1ff;
+  padding: 0.5rem;
+}
+
+main > div > div > div > div > button:hover {
+  background-color: #41a0ff;
+}
+
+main > div > div > div > div > button:active {
+  font-size: 24px;
+  background-color: #0080ff;
+  padding: 0.5rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section > div {
+  margin-top: 1.5rem;
+  background-color: #8890c0;
+  width: 32rem;
+  height: 39rem;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+section > div > div {
+  background-color: #605068;
+  height: 99%;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section > div > div > div {
+  background-color: #f8f8f8;
+  height: 99%;
+  width: 98%;
+  padding: 1rem;
+}
+
+section > div > div > div > article > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.pokemonname {
+  font-size: 32px;
+}
+
+.pokemonid {
+  font-size: 23px;
+}
+
+.pokemonhp {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.pokemontype {
+  font-size: 25px;
+  padding: 1.5px;
+  text-shadow: 0.5px 0.5px 0 white;
+}
+
+article {
+  gap: 10px;
+}
+
+article > div:first-child > div:first-child {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+article > div:first-child > div:last-child {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+article > div:nth-child(2) > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+article > div:nth-child(2) > div > img {
+  width: 300px;
+  height: 300px;
+  image-rendering: pixelated;
+}
+
+.pokemon-abilities {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pokemon-abilities > .ability {
+  border: 2px solid black;
+  padding: 8px;
+  background-color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pokemon-abilities > .ability > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemon-abilities > .ability > div > p:first-child {
+  font-size: 18px;
+}
+
+.hidden-ability {
+  font-size: 18px;
+}
+
+.pokemon-abilities > .ability > div > p:nth-child(2) {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.pokemon-abilities > .ability > p {
+  font-size: 15px;
+}
+
+.error-message {
+  font-weight: bold;
+  font-size: 22px;
+  color: #b00000;
+  text-align: center;
+  margin-top: 8px;
+}
