@@ -18,3 +18,7 @@ If you are developing a production application, we recommend using TypeScript wi
 ## PS to Sir
 
 I apologize for using my alt account (`wronggenupload-lab`) for this activity. I normally use this account on my laptop, and I did not expect it to be able to push to the repository instead of my school account. I only realized it after the push was made.
+
+## Netlify
+
+[Open Activity](https://pokedexpixel.netlify.app/)
