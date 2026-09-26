@@ -112,8 +112,6 @@ function App() {
         <button disabled>FORMS</button>
       </header>
 
-
-
       <main>
         <div>
           <div>  
@@ -146,9 +144,6 @@ function App() {
         <div>
           <div>
             <div>
-
-
-              
                 <article>
                   <div>
                     <div>
@@ -171,17 +166,15 @@ function App() {
                     </div>
                   </div>
 
-                  <div>
-                    <div
-                      style={{
-                        border: `4px solid ${typeBorderColors[pokemonData.types[0].type.name]}`
-                      }}
-                    >
-                      <img
-                        src={pokemonData.sprites.front_default}
-                        alt={pokemonData.name}
-                      />
-                    </div>
+                  <div
+                    style={{
+                      border: `4px solid ${typeBorderColors[pokemonData.types[0].type.name]}`
+                    }}
+                  >
+                    <img
+                      src={pokemonData.sprites.front_default}
+                      alt={pokemonData.name}
+                    />
                   </div>
 
                   <div className="pokemon-abilities">
@@ -209,12 +202,35 @@ function App() {
                     ))}
                   </div>
                 </article>
-              
-
             </div>
           </div>
         </div>
-      </section>)}
+
+        <div>
+          <div>
+            <div className='pokediv'>
+              <h3 className='pokemoninfotxt'>POKEMON INFORMATION</h3>
+              <section className='pokeinfo'>
+                <h4 className='hpinfo'>HP: {pokemonData.stats[0].base_stat}</h4>
+                <h4 className='atkinfo'>ATK: {pokemonData.stats[1].base_stat}</h4>
+              </section>
+              <section className='pokeinfo'>
+                <h4 className='definfo'>DEF: {pokemonData.stats[2].base_stat}</h4>
+                <h4 className='spdinfo'>SPD: {pokemonData.stats[5].base_stat}</h4>
+              </section>      
+              <section className='pokeinfo'>
+                <h4 className='hgtinfo'>HEIGHT: {pokemonData.height / 10} m</h4>
+                <h4 className='wgtinfo'>WEIGHT: {pokemonData.weight / 10} kg</h4>
+              </section>
+
+              <section className='pokeinfo'>
+                <h4 className='xpinfo'>BASE EXP: {pokemonData.base_experience}</h4>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
     </>
   )
 }

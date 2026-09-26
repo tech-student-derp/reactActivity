@@ -13,8 +13,9 @@
 /* fix this later */
 
 body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: repeating-linear-gradient(
         to bottom,
         #4a7342 0px,
@@ -25,7 +26,9 @@ body {
 }
 
 header {
-  display: grid;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
   padding: 1.25rem;
   background-color: gray;
 }
@@ -199,14 +202,14 @@ article > div:first-child > div:last-child {
   gap: 12px;
 }
 
-article > div:nth-child(2) > div {
+article > div:nth-child(2) {
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin-top: 10px;
 }
 
-article > div:nth-child(2) > div > img {
+article > div:nth-child(2) > img {
   width: 300px;
   height: 300px;
   image-rendering: pixelated;
@@ -260,4 +263,34 @@ article > div:nth-child(2) > div > img {
   color: #b00000;
   text-align: center;
   margin-top: 8px;
+}
+
+.pokediv {
+  display: flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pokeinfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pokemoninfotxt {
+  font-size: 35px;
+}
+
+.hpinfo,
+.atkinfo,
+.definfo,
+.spdinfo,
+.hgtinfo,
+.wgtinfo,
+.xpinfo
+{
+  font-size: 45px;
 }
