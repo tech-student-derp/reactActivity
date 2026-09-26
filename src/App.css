@@ -11,9 +11,8 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background: repeating-linear-gradient(
         to bottom,
         #4a7342 0px,
@@ -24,9 +23,7 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  display: grid;
   padding: 1.25rem;
   background-color: gray;
 }
@@ -257,6 +254,7 @@ article > div:nth-child(2) > div > img {
 .error-message {
   font-weight: bold;
   font-size: 22px;
+  background-color: white;
   color: #b00000;
   text-align: center;
   margin-top: 8px;

@@ -52,11 +52,24 @@ function App() {
 
   const searchPokemon = async () =>
   {
+    if (search.trim() === "")
+    {
+      setPokemonData(null);
+      setErrorMessage("Please enter a Pokemon name first.");
+      return;
+    }
+    if (!/^[a-zA-Z0-9]+$/.test(search.trim()))
+    {
+      setPokemonData(null);
+      setErrorMessage("Only letters and numbers are allowed.");
+      return;
+    }
+
     try
     {
       const res = await axios.get
       (
-        `https://pokeapi.co/api/v2/pokemon/${search}`
+        `https://pokeapi.co/api/v2/pokemon/${search.trim().toLowerCase()}`
       );
 
       setPokemonData(res.data);
@@ -99,6 +112,8 @@ function App() {
         <button disabled>FORMS</button>
       </header>
 
+
+
       <main>
         <div>
           <div>  
@@ -121,19 +136,19 @@ function App() {
         </div>
       </main>
 
-
-
+      {errorMessage && (
+        <p className="error-message">
+          {errorMessage}
+        </p>
+      )}
+      {pokemonData && (
       <section>
         <div>
           <div>
             <div>
-              {errorMessage && (
-                <p className="error-message">
-                  {errorMessage}
-                </p>
-              )}
 
-              {pokemonData && (
+
+              
                 <article>
                   <div>
                     <div>
@@ -194,12 +209,12 @@ function App() {
                     ))}
                   </div>
                 </article>
-              )}
+              
 
             </div>
           </div>
         </div>
-      </section>
+      </section>)}
     </>
   )
 }
